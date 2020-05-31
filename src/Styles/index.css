@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(67, 67, 67);
+}
+
+#logoBox {
+  width: 500px;
+  height: 281px;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 0;
+}
