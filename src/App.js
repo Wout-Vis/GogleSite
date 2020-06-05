@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 
 // Component Import
+import IntroScene from "./IntroComponent/IntroScene";
 import Header from "./HeaderComponent/Header";
 import Footer from "./FooterComponent/Footer";
 import Chatbot from "./ChatbotComponent/Chatbot";
@@ -31,6 +32,8 @@ function App() {
       <Footer />
 
       <Chatbot />
+
+      <IntroScene />
     </>
   );
 }

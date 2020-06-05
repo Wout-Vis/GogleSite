@@ -24,9 +24,9 @@ export default class Header extends Component {
               <NavDropdown.Item as={Link} to="/board">
                 The Board
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/story">
-                Our story
-              </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/story">
+                    Story
+                </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
