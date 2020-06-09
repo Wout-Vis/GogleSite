@@ -1,0 +1,30 @@
+#firstSlider {
+  height: 20%;
+  object-fit: cover;
+}
+
+#seccondSlider {
+  height: 20%;
+  object-fit: cover;
+}
+
+#thirdSlider {
+  height: 20%;
+  object-fit: cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.4fr 0.8fr 1.1fr;
+  grid-template-rows: 0.2fr 1fr 1.4fr 1.4fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . ." ". . founderImg ." ". founderText . ." ". . . ." ". . . .";
+}
+
+.founderText {
+  grid-area: founderText;
+}
+
+.founderImg {
+  grid-area: founderImg;
+}
