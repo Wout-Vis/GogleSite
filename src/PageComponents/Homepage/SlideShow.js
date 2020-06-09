@@ -1,6 +1,7 @@
 import React from "react";
 
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function SlideShow() {
   return (
@@ -8,42 +9,50 @@ export default function SlideShow() {
       <Carousel>
         <Carousel.Item>
           <img
+            style={{ height: 400 }}
+            id="firstSlider"
             className="d-block w-100"
-            src="https://www.layoutit.com/img/sports-q-c-1600-500-1.jpg"
+            src="https://singularityhub.com/wp-content/uploads/2019/03/IBM-quantum-machine-learning-nature-art-square-Computing-1068x601.jpg"
             alt="First slide"
             draggable="false"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Gogle</h3>
+            <p>Innovating since 2015</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
+            style={{ height: 400 }}
+            id="seccondSlider"
             className="d-block w-100"
-            src="https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg"
+            src="https://cls.ucl.ac.uk/wp-content/uploads/nf_image/Children-future-opea2aeco8bf60clt46wy8vs.jpg"
             alt="Third slide"
             draggable="false"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <Button size="lg" as={Link} to="/founder">
+              Our vision
+            </Button>
+            <p>Take a look at our vision</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
+            id="thirdSlider"
+            style={{ height: 400 }}
             className="d-block w-100"
-            src="https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg"
+            src="https://image.freepik.com/free-photo/stock-market-forex-trading-graph-graphic-concept_73426-66.jpg"
             alt="Third slide"
             draggable="false"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <Button size="lg" as={Link} to="/products">
+              Gogle Stocks
+            </Button>
+            <p>now introducing Gogle stocks</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
