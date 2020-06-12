@@ -8,6 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import "./Styles/index.css";
 import "./Styles/carousel.css";
+import "./Styles/story.css";
 
 ReactDOM.render(
   <React.StrictMode>
