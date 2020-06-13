@@ -1,4 +1,8 @@
 For the tree we use some icons and symbols, only when we end up using the file system!!!!
+### npm i react-p5
+
+### npm install formik
+### npm install yup
 
 ### npm install styled-components
 ### npm install react-icons
