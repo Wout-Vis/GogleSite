@@ -13,12 +13,20 @@
   object-fit: cover;
 }
 
+#div_absolute {
+  border: 3px solid #8ac007;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 0.7fr 1.4fr 0.8fr 1.1fr;
   grid-template-rows: 0.2fr 1fr 1.4fr 1.4fr 1fr;
   gap: 1px 1px;
-  grid-template-areas: ". . . ." ". . founderImg ." ". founderText . ." ". . . ." ". . . .";
+  grid-template-areas: ". . . ." " . . founderImg ." ". founderText . ." ". . . ." ". . . .";
+}
+.founderQuote {
+  grid-area: founderQuote;
+  font-size: small;
 }
 
 .founderText {
@@ -26,5 +34,9 @@
 }
 
 .founderImg {
+  height: 50%;
+  bottom: 10px;
   grid-area: founderImg;
+  font-size: small;
+  text-align: center;
 }

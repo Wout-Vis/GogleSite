@@ -16,6 +16,7 @@ import Founder from "./PageComponents/Founder/Founder";
 import Board from "./PageComponents/Board/Board";
 import Story from "./PageComponents/Story/Story";
 
+import Game from "./Game";
 export class App extends Component {
   constructor() {
     super();
@@ -30,7 +31,6 @@ export class App extends Component {
       <>
         <Router>
           <Header />
-
           <Chatbot />
           <Switch>
             <Route name="home" exact path="/" component={Homepage} />
@@ -42,7 +42,7 @@ export class App extends Component {
         </Router>
 
         <Footer />
-
+        <Game />
         <IntroScene />
       </>
     );

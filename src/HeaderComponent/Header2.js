@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../GFX/gogle_logoAsset9.png";
 
-export default class Header extends Component {
+export default class Header2 extends Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -28,6 +28,9 @@ export default class Header extends Component {
                 Story
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/products">
+              Secret files
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

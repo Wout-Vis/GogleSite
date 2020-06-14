@@ -34,3 +34,15 @@ body {
   margin-top: 20%;
   padding: 0;
 }
+
+#cards {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#cardHeader {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}

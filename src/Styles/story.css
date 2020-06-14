@@ -9,6 +9,8 @@
 .lt-imgPlace {
   margin-top: 5%;
   grid-area: lt-imgPlace;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .lt-txtPlace {
@@ -17,10 +19,21 @@
 
 #timeLine {
   height: auto;
-  width: 95%;
 }
 
 #gogleStory {
   font-family: "Roboto", sans-serif;
   text-align: center;
+}
+
+#cards {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#cardHeader {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
