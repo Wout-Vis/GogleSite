@@ -1,18 +1,19 @@
 import React from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
+import LoginPopUP from "../loginForm/LoginPopUp";
 
+import Avatar from "../GFX/avatar.jpg";
 export default function ChatbotComponent(props) {
-    
   const theme = {
     background: "white",
-    fontFamily: "Arial, Helvetica, sans-serif",
-    headerBgColor: "#00B2B2",
+    fontFamily: "Roboto, sans-serif",
+    headerBgColor: "#4285F4",
     headerFontColor: "#fff",
     headerFontSize: "25px",
-    botBubbleColor: "#00B2B2",
+    botBubbleColor: "#4285F4",
     botFontColor: "#fff",
-    userBubbleColor: "#fff",
+    userBubbleColor: "#F4B142",
     userFontColor: "#4c4c4c",
   };
 
@@ -20,6 +21,7 @@ export default function ChatbotComponent(props) {
     width: "300px",
     height: "400px",
     floating: true,
+    enableMobileAutoFocus: true,
   };
   const steps = [
     {
@@ -48,7 +50,7 @@ export default function ChatbotComponent(props) {
         {
           value: "information",
           label: "Product Indormation",
-          trigger: "Asking for Tomatoes in Pizza",
+          trigger: "Asking for password",
         },
         {
           value: "Where to buy",
@@ -69,7 +71,7 @@ export default function ChatbotComponent(props) {
         {
           value: true,
           label: "Yes",
-          trigger: "Asking for Tomatoes in Pizza",
+          trigger: "Asking for password",
         },
         {
           value: "false",
@@ -79,19 +81,19 @@ export default function ChatbotComponent(props) {
       ],
     },
     {
-      id: "Asking for Tomatoes in Pizza",
-      message: "Would you like to have tomatoes in your pizza",
-      trigger: "Adding Tomatoes in Pizza",
+      id: "Asking for password",
+      message: "Do you have the password?",
+      trigger: "Password question",
     },
     {
-      id: "Adding Tomatoes in Pizza",
+      id: "Password question",
       options: [
         {
           value: true,
           label: "Yes",
           trigger: () => {
             props.eventHandler("tomato");
-            return "Asking for Mushroom in Pizza";
+            return "Login";
           },
         },
         {
@@ -101,7 +103,15 @@ export default function ChatbotComponent(props) {
         },
       ],
     },
-
+    {
+      id: "Login",
+      component: (
+        <div>
+          <LoginPopUP />
+        </div>
+      ),
+      end: true,
+    },
     {
       id: "Asking for Mushroom in Pizza",
       message: "Would you like to have mushroom in your pizza",
@@ -184,7 +194,13 @@ export default function ChatbotComponent(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <ChatBot steps={steps} {...config} />
+      <ChatBot
+        headerTitle="Helpdesk"
+        floatingstyle
+        botAvatar={Avatar}
+        steps={steps}
+        {...config}
+      />
     </ThemeProvider>
   );
 }
