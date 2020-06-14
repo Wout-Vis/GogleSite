@@ -2,7 +2,7 @@ For the tree we use some icons and symbols, only when we end up using the file s
 
 ### npm install --save react-indiana-drag-scroll
 
-### npm i react-p5
+### npm install p5
 
 ### npm install formik
 ### npm install yup
