@@ -1,0 +1,26 @@
+.lt-grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 3.1fr 0.6fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr 0.6fr 1.4fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . ." ". lt-txtPlace ." ". lt-imgPlace ." ". . ." ". . .";
+}
+
+.lt-imgPlace {
+  margin-top: 5%;
+  grid-area: lt-imgPlace;
+}
+
+.lt-txtPlace {
+  grid-area: lt-txtPlace;
+}
+
+#timeLine {
+  height: auto;
+  width: 95%;
+}
+
+#gogleStory {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
