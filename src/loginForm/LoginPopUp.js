@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Modal, Button } from "react-bootstrap";
 
-import LoginForm from "./LoginForm";
 import { FormikApp } from "./LoginPage";
 class LoginPopUP extends Component {
   state = {

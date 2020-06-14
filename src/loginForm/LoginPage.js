@@ -1,8 +1,9 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import * as Yup from "yup";
 
 import { withFormik, Form, Field } from "formik";
+
+import Progress from "../Progress"; 
 
 const LoginTest = ({ values, errors, touched }) => (
   <div>
@@ -24,6 +25,7 @@ const LoginTest = ({ values, errors, touched }) => (
 );
 
 export const FormikApp = withFormik({
+  
   mapPropsToValues({ email, password, terms }) {
     return {
       email: email || "",
@@ -46,6 +48,7 @@ export const FormikApp = withFormik({
         values.password === "test"
       ) {
         resetForm();
+        Progress.updateProgress('2');
       } else {
         setErrors({ email: "The combination is wrong" });
       }
