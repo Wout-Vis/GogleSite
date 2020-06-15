@@ -26,6 +26,20 @@ export default function Cards() {
       <Accordion>
         <CardDeck id="cards">
           <Card>
+            <Card.Img variant="top" src={Ericksen} />
+            <Card.Body>
+              <Card.Title>Nicklas Ericksen</Card.Title>
+              <Card.Text>CEO/Founder</Card.Text>
+
+              <Accordion.Toggle as={Button} variant="link" eventKey="3">
+                Read More
+              </Accordion.Toggle>
+            </Card.Body>
+            <Accordion.Collapse eventKey="3">
+              <Card.Body>Hello! I'm the body</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
             <Card.Img variant="top" src={Ahn} />
             <Card.Body>
               <Card.Title>Jungkook Ahn</Card.Title>
@@ -38,6 +52,8 @@ export default function Cards() {
               <Card.Body>Hello! I'm the body</Card.Body>
             </Accordion.Collapse>
           </Card>
+        </CardDeck>
+        <CardDeck id="cards">
           <Card>
             <Card.Img variant="top" src={Lannister} />
             <Card.Body>
@@ -51,7 +67,13 @@ export default function Cards() {
               <Card.Body>Hello! I'm the body</Card.Body>
             </Accordion.Collapse>
           </Card>
-
+          <Card>
+            <Card.Img variant="top" src={Taylor} />
+            <Card.Body>
+              <Card.Title>Matthew Taylor</Card.Title>
+              <Card.Text>Chairman of Gogle Green branch</Card.Text>
+            </Card.Body>
+          </Card>
           <Card>
             <Card.Img variant="top" src={Ramos} />
             <Card.Body>
@@ -95,10 +117,10 @@ export default function Cards() {
 
         <CardDeck id="cards">
           <Card>
-            <Card.Img variant="top" src={Ericksen} />
+            <Card.Img variant="top" src={Mirova} />
             <Card.Body>
-              <Card.Title>Nicklas Ericksen</Card.Title>
-              <Card.Text>CEO/Founder</Card.Text>
+              <Card.Title>Aleksandra Mirova</Card.Title>
+              <Card.Text>CSO</Card.Text>
             </Card.Body>
           </Card>
           <Card>
@@ -138,23 +160,6 @@ export default function Cards() {
             <Card.Body>
               <Card.Title>Ernesto Gonzales</Card.Title>
               <Card.Text>CIO</Card.Text>
-            </Card.Body>
-          </Card>
-        </CardDeck>
-
-        <CardDeck id="cards">
-          <Card>
-            <Card.Img variant="top" src={Mirova} />
-            <Card.Body>
-              <Card.Title>Aleksandra Mirova</Card.Title>
-              <Card.Text>CSO</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src={Taylor} />
-            <Card.Body>
-              <Card.Title>Matthew Taylor</Card.Title>
-              <Card.Text>Chairman of Gogle Green branch</Card.Text>
             </Card.Body>
           </Card>
         </CardDeck>
