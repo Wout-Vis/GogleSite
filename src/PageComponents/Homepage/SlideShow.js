@@ -33,7 +33,7 @@ export default function SlideShow() {
 
           <Carousel.Caption>
             <Button size="lg" as={Link} to="/founder">
-              Our founder
+              Our vision
             </Button>
             <p>Take a look at our vision</p>
           </Carousel.Caption>

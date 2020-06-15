@@ -17,18 +17,6 @@
   border: 3px solid #8ac007;
 }
 
-#homeImg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#quoteBox {
-  margin-top: 2vw;
-  margin-left: 4vw;
-  position: relative;
-  float: left;
-}
 .grid-container {
   display: grid;
   grid-template-columns: 0.7fr 1.4fr 0.8fr 1.1fr;
@@ -46,15 +34,9 @@
 }
 
 .founderImg {
+  height: 50%;
   bottom: 10px;
   grid-area: founderImg;
   font-size: small;
   text-align: center;
-}
-#founderImg {
-  width: 125%;
-}
-
-#meetTheBoard {
-  padding: 2vw;
 }

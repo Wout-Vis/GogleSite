@@ -18,7 +18,7 @@ import Founder from "./PageComponents/Founder/Founder";
 import Board from "./PageComponents/Board/Board";
 import Story from "./PageComponents/Story/Story";
 
-import CaptchaPuzzle from './Puzzles/CaptchaPuzzle';
+import DotPuzzle from './Puzzles/DotPuzzle';
 
 export default class App extends Component {
   
@@ -26,7 +26,9 @@ export default class App extends Component {
   {
     super();
     Progress.updateProgress('0');
-    this.state = {progress: Progress.getProgress()};
+    this.state = {
+      progress: Progress.getProgress()
+    };
     this.introTimer = 0;
   }
 
@@ -58,6 +60,7 @@ export default class App extends Component {
       case '4':
         return(
           <>
+            End Screen
           </>
         );
       case '3':
@@ -69,7 +72,11 @@ export default class App extends Component {
       case '2':
           return (
             <>
-              Puzzle Site
+              <div id="puzzleBG">
+                <div id="puzzleBox">
+                  <DotPuzzle />
+                </div>
+              </div>
             </>
           );
       default:
@@ -88,8 +95,6 @@ export default class App extends Component {
             </Router>
 
             <Footer />
-
-            <CaptchaPuzzle />
 
             <IntroScene />
           </>
