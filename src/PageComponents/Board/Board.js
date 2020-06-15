@@ -3,7 +3,7 @@ import Cards from "./Cards";
 export default function Board() {
   return (
     <div style={{ margin: 40 }}>
-      <h2 id="cardHeader">Our current board</h2>
+      <h1 id="cardHeader">Board of directors</h1>
       <Cards />
     </div>
   );

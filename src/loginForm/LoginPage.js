@@ -3,7 +3,7 @@ import * as Yup from "yup";
 
 import { withFormik, Form, Field } from "formik";
 
-import Progress from "../Progress"; 
+import Progress from "../Progress";
 
 const LoginTest = ({ values, errors, touched }) => (
   <div>
@@ -12,18 +12,14 @@ const LoginTest = ({ values, errors, touched }) => (
       <div>
         {touched.password && errors.password && <p>{errors.password}</p>}
       </div>
-
       <Field type="email " name="email" placeholder="Email" />
       <Field type="password" name="password" placeholder="password" />
-      <label>
-        <Field type="checkbox" name="terms" checked={values.terms} />
-        Accept the terms of use
-      </label>
-      <button type="submit">submit</button>
+      <button type="submit">Submit</button>
     </Form>
   </div>
-);
-
+)
+  
+  
 export const FormikApp = withFormik({
   
   mapPropsToValues({ email, password, terms }) {
@@ -44,8 +40,8 @@ export const FormikApp = withFormik({
     setTimeout(() => {
       console.log(values);
       if (
-        values.email === "jason.zeng@gmail.com" &&
-        values.password === "test"
+        values.email === "d.escudero@gogle.com" &&
+        values.password === "Chewie"
       ) {
         resetForm();
         Progress.updateProgress('2');
