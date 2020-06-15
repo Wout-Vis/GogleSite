@@ -4,12 +4,7 @@ import { ThemeProvider } from "styled-components";
 import LoginPopUP from "../loginForm/LoginPopUp";
 
 import Avatar from "../GFX/avatar.jpg";
-import { number } from "yup";
-import { message } from "antd";
-
-let noCounter = 0;
-
-export default function ChatbotComponent(props) {
+export default function ChatbotComponent(props, passCaptcha) {
   const theme = {
     background: "white",
     fontFamily: "Roboto, sans-serif",
@@ -42,132 +37,157 @@ export default function ChatbotComponent(props) {
     {
       id: "Waiting user input for name",
       user: true,
-      trigger: "tellStory",
+      trigger: "Asking options to eat",
     },
     {
-      delay: 1500,
-
-      id: "tellStory",
-      message: "Hello {previousValue}, Please click on what you want to know",
-      trigger: "moreStory",
-    },
-
-    {
-      delay: 3000,
-      id: "moreStory",
-      message:
-        " I am an employee in the engineering department. Gogle is not what it seems",
-      trigger: "concern",
+      id: "Asking options to eat",
+      message: "Hi {previousValue}, Please click on what you want to know",
+      trigger: "Displaying options to eat",
     },
     {
-      delay: 4500,
-
-      id: "concern",
-      message:
-        " I have voiced my concerns with my supervisor but he seems to be in on it. Gogle possess technologies that no one should have",
-      trigger: "survailance",
-    },
-    {
-      delay: 6000,
-
-      id: "survailance",
-      message:
-        " They increased surveillance on me. I can’t come out with this information",
-      trigger: "checkPortal",
-    },
-    {
-      delay: 6000,
-
-      id: "checkPortal",
-      message:
-        "  Please try investigating. I can link you to the employee portal but you do have to log in. My account is not enough because I do not have access to the restricted parts of the site",
-      trigger: "mailHint",
-    },
-    {
-      delay: 4500,
-      id: "mailHint",
-      message:
-        "You need to find the credentials of one of the directors. The standard company email format is firstletter.lastname@ gogle.com",
-      trigger: "passWordHint",
-    },
-    {
-      delay: 6000,
-      id: "passWordHint",
-      message:
-        " I would not know a password. Maybe you can find something on the website",
-      trigger: "askCredit",
-    },
-    {
-      delay: 6000,
-      id: "askCredit",
-      message: " Do you have the credentials?",
-      trigger: "creditAsk",
-    },
-    {
-      id: "creditAsk",
+      id: "Displaying options to eat",
       options: [
-        { value: "yes", label: "Yes", trigger: "giveLogin" },
-        { value: "no", label: "No", trigger: "awnserNo" },
+        {
+          value: "information",
+          label: "Product Indormation",
+          trigger: "Asking for password",
+        },
+        {
+          value: "Where to buy",
+          label: "Where to buy",
+          trigger: "Store",
+        },
       ],
     },
     {
-      id: "creditAsk2",
+      id: "Store",
+      message:
+        "Sorry, We don't have burger available at the moment. Would you like to try our pizza?",
+      trigger: "Asking for pizza after burger",
+    },
+    {
+      id: "Asking for pizza after burger",
       options: [
-        { value: "yes", label: "Yes", trigger: "giveLogin" },
-        { value: "no", label: "No", trigger: "awnserNo2" },
+        {
+          value: true,
+          label: "Yes",
+          trigger: "Asking for password",
+        },
+        {
+          value: "false",
+          label: "No",
+          trigger: "Done",
+        },
       ],
     },
     {
-      id: "creditAsk3",
+      id: "Asking for password",
+      message: "Do you have the password?",
+      trigger: "Password question",
+    },
+    {
+      id: "Password question",
       options: [
-        { value: "yes", label: "Yes", trigger: "giveLogin" },
-        { value: "no", label: "No", trigger: "awnserNo3" },
+        {
+          value: true,
+          label: "Yes",
+          trigger: () => {
+            props.eventHandler("tomato");
+            return "Login";
+          },
+        },
+        {
+          value: "false",
+          label: "No",
+          trigger: "Asking for Mushroom in Pizza",
+        },
       ],
     },
     {
-      delay: 6000,
-      id: "awnserNo",
-      message:
-        "Okay, keep searching please, fill in yes or no whenever you think you have it",
-      trigger: "creditAsk2",
+      id: "Login",
+      component: (
+        <div>
+          <LoginPopUP />
+        </div>
+      ),
+      end: true,
     },
     {
-      delay: 6000,
-      id: "awnserNo2",
-      message:
-        "Okay, keep searching please, fill in yes or no whenever you think you have it",
-      trigger: "creditAsk3",
+      id: "Asking for Mushroom in Pizza",
+      message: "Would you like to have mushroom in your pizza",
+      trigger: "Adding Mushroom in Pizza",
+    },
+
+    {
+      id: "Adding Mushroom in Pizza",
+      options: [
+        {
+          value: true,
+          label: "Yes",
+          trigger: () => {
+            props.eventHandler("mushroom");
+            return "Asking for Corn in Pizza";
+          },
+        },
+        {
+          value: "false",
+          label: "No",
+          trigger: "Asking for Corn in Pizza",
+        },
+      ],
     },
     {
-      delay: 6000,
-      id: "awnserNo3",
-      message: "I just remembered",
-      trigger: "GiveGreatHint",
+      id: "Asking for Corn in Pizza",
+      message: "Would you like to have corn in your pizza",
+      trigger: "Adding Corn in Pizza",
+    },
+
+    {
+      id: "Adding Corn in Pizza",
+      options: [
+        {
+          value: true,
+          label: "Yes",
+          trigger: () => {
+            props.eventHandler("corn");
+            return "Asking for Veggies in Pizza";
+          },
+        },
+        {
+          value: "false",
+          label: "No",
+          trigger: "Asking for Veggies in Pizza",
+        },
+      ],
+    },
+
+    {
+      id: "Asking for Veggies in Pizza",
+      message: "Would you like to have veggies in your pizza",
+      trigger: "Adding Veggies in Pizza",
+    },
+
+    {
+      id: "Adding Veggies in Pizza",
+      options: [
+        {
+          value: true,
+          label: "Yes",
+          trigger: () => {
+            props.eventHandler("veggie");
+            return "Done";
+          },
+        },
+        {
+          value: "false",
+          label: "No",
+          trigger: "Done",
+        },
+      ],
     },
     {
-      delay: 5700,
-      id: "GiveGreatHint",
-      message:
-        "One of the directors, Mr. Escudero, is an absolute knob. He got his positions because his father has connections. I worked with him on a project and he is about the most unprofessional person I have ever met",
-      trigger: "dogTalk",
-    },
-    {
-      delay: 6000,
-      id: "dogTalk",
-      message:
-        "He always talked about some stupid show and his dog, I can’t remember the name sadly. He seems like the type of person to have an easy password, maybe try finding information about him",
-      trigger: "giveLogin",
-    },
-    {
-      delay: 7500,
-      id: "giveLogin",
-      message: " follow this link to the login",
-      trigger: "loginComponent",
-    },
-    {
-      delay: 2000,
-      id: "loginComponent",
-      component: <LoginPopUP />,
+      id: "Done",
+      message: "Have a great day !!",
       end: true,
     },
   ];
@@ -176,7 +196,6 @@ export default function ChatbotComponent(props) {
     <ThemeProvider theme={theme}>
       <ChatBot
         headerTitle="Helpdesk"
-        hideUserAvatar="true"
         floatingstyle
         botAvatar={Avatar}
         steps={steps}

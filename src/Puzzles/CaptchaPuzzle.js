@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import p5 from "p5";
+import Progress from "../Progress";
 
 
 export default class CaptchaPuzzle extends Component {
@@ -11,7 +12,6 @@ export default class CaptchaPuzzle extends Component {
     }
 
     Sketch = (p) => {
-        var control;
 
         p.setup = () => {
             p.createCanvas(540, 360);
@@ -74,9 +74,9 @@ export default class CaptchaPuzzle extends Component {
                     n[i] = p.int(p.random(num));
                     var redo = false;
 
-                    while (1==1) {
+                    while (true) {
                         for (var j=0; j<i; j++) {
-                            if (n[i] == n[j]) redo = true;
+                            if (n[i] === n[j]) redo = true;
                         }
                         if (redo) {
                             n[i] = p.int(p.random(num));
@@ -84,16 +84,16 @@ export default class CaptchaPuzzle extends Component {
                         } else break;
                     }
 
-                    if (n[i] == 0) {
+                    if (n[i] === 0) {
                         pos[i] = p.createVector(w/2, h/2);
                     }
-                    if (n[i] == 1) {
+                    if (n[i] === 1) {
                         pos[i] = p.createVector(p.width-w/2, h/2);
                     }
-                    if (n[i] == 2) {
+                    if (n[i] === 2) {
                         pos[i] = p.createVector(w/2, p.height-h/2);
                     }
-                    if (n[i] == 3) {
+                    if (n[i] === 3) {
                         pos[i] = p.createVector(p.width-w/2, p.height-h/2);
                     }
 
@@ -107,7 +107,7 @@ export default class CaptchaPuzzle extends Component {
             }
 
             display() {
-                if (this.order == 4) {
+                if (this.order === 4) {
                     this.complete = true;
                 }
                 if (this.complete) {
@@ -115,6 +115,7 @@ export default class CaptchaPuzzle extends Component {
                     p.textSize(20);
                     p.textAlign(p.CENTER, p.CENTER);
                     p.text("Correct! Your next password is ...", p.width/2, p.height/2);
+                    Progress.solveCaptcha();
                 }
                 else {
                     for (let i = 0; i < 4; i++) {
@@ -125,7 +126,7 @@ export default class CaptchaPuzzle extends Component {
 
             mouseClickedEvent(mx, my) {
                 for (var i = 0; i < this.button.length; i++) {
-                    if (this.order == i && mx > this.button[i].posX - this.button[i].W/2 && mx < this.button[i].posX + this.button[i].W/2 && my > this.button[i].posY - this.button[i].H/2 && my < this.button[i].posY + this.button[i].H/2) {
+                    if (this.order === i && mx > this.button[i].posX - this.button[i].W/2 && mx < this.button[i].posX + this.button[i].W/2 && my > this.button[i].posY - this.button[i].H/2 && my < this.button[i].posY + this.button[i].H/2) {
                         this.button[i].correct();
                         this.order += 1;
                     }
