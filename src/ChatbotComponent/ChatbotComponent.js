@@ -4,10 +4,6 @@ import { ThemeProvider } from "styled-components";
 import LoginPopUP from "../loginForm/LoginPopUp";
 
 import Avatar from "../GFX/avatar.jpg";
-import { number } from "yup";
-import { message } from "antd";
-
-let noCounter = 0;
 
 export default function ChatbotComponent(props) {
   const theme = {
@@ -48,7 +44,7 @@ export default function ChatbotComponent(props) {
       delay: 1500,
 
       id: "tellStory",
-      message: "Hello {previousValue}, Please click on what you want to know",
+      message: "Hello {previousValue}",
       trigger: "moreStory",
     },
 

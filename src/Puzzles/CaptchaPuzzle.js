@@ -114,7 +114,7 @@ export default class CaptchaPuzzle extends Component {
                     p.fill(0, 200, 0);
                     p.textSize(20);
                     p.textAlign(p.CENTER, p.CENTER);
-                    p.text("Correct! Your next password is ...", p.width/2, p.height/2);
+                    p.text("Captcha resolved...", p.width/2, p.height/2);
                     Progress.solveCaptcha();
                 }
                 else {

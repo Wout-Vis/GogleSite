@@ -13,12 +13,14 @@ import Progress from "./Progress";
 
 // Page Imports
 import Homepage from "./PageComponents/Homepage/Homepage";
-import Products from "./PageComponents/Products/Products";
+import Products from "./PageComponents/Branches/Branches";
 import Founder from "./PageComponents/Founder/Founder";
 import Board from "./PageComponents/Board/Board";
 import Story from "./PageComponents/Story/Story";
 
 import DotPuzzle from './Puzzles/DotPuzzle';
+
+import MockUp from './ControlPanel/MockUp';
 
 export default class App extends Component {
   
@@ -66,7 +68,7 @@ export default class App extends Component {
       case '3':
         return (
           <>
-            Control Panel Site
+            <MockUp />
           </>
         );
       case '2':

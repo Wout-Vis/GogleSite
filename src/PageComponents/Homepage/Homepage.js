@@ -40,7 +40,7 @@ export default function Homepage() {
               also has a dog named Chewie, quite a name for a Star Trek fan...
             </Card.Text>
             <Button variant="primary" as={Link} to="/board">
-              Go somewhere
+              More about the Board
             </Button>
           </Card.Body>
         </Card>

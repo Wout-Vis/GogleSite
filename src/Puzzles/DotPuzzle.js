@@ -113,7 +113,7 @@ export default class DotPuzzle extends Component {
             if (this.completed) {
                 p.fill(0, 200, 0);
                 p.textSize(50);
-                p.text("Correct! Your next password is ...", p.width/2, p.height/2);
+                p.text("Authentication successful...", p.width/2, p.height/2);
                 Progress.updateProgress('3');
             }
           }
