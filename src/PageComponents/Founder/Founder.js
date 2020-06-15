@@ -1,6 +1,8 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 
+import Ericksen from "./Ericksen.JPG";
+
 export default function Founder() {
   return (
     <div>
@@ -38,10 +40,7 @@ export default function Founder() {
           </p>
         </div>
         <div class="founderImg">
-          <Image
-            id="founderImg"
-            src="https://www.ludoviccareme.com/files/image_211_image_fr.jpg"
-          ></Image>
+          <Image id="founderImg" src={Ericksen}></Image>
           <p>
             “From day one our goal at Gogle is to contribute to the betterment
             of humanity. We believe that our advanced technologies provide a
