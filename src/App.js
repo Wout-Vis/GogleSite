@@ -13,65 +13,45 @@ import Progress from "./Progress";
 
 // Page Imports
 import Homepage from "./PageComponents/Homepage/Homepage";
-import Products from "./PageComponents/Products/Products";
+import Products from "./PageComponents/Products/Products.js";
 import Founder from "./PageComponents/Founder/Founder";
 import Board from "./PageComponents/Board/Board";
 import Story from "./PageComponents/Story/Story";
 
-import CaptchaPuzzle from './Puzzles/CaptchaPuzzle';
+import CaptchaPuzzle from "./Puzzles/CaptchaPuzzle";
 
 export default class App extends Component {
-  
-  constructor()
-  {
+  constructor() {
     super();
-    Progress.updateProgress('0');
-    this.state = {progress: Progress.getProgress()};
+    Progress.updateProgress("0");
+    this.state = { progress: Progress.getProgress() };
     this.introTimer = 0;
   }
 
   componentDidMount() {
-    this.progressTicker = setInterval(
-      () => this.tick(), 500
-    );
+    this.progressTicker = setInterval(() => this.tick(), 500);
   }
 
   componentWillUnmount() {
-    clearInterval( this.progressTicker );
+    clearInterval(this.progressTicker);
   }
 
   tick() {
-    if ( this.introTimer > 10 )
-    {
-      this.setState(
-        { progress: Progress.getProgress() }
-      );
+    if (this.introTimer > 10) {
+      this.setState({ progress: Progress.getProgress() });
     } else {
       this.introTimer++;
     }
   }
 
   render() {
-
-    switch ( this.state.progress )
-    {
-      case '4':
-        return(
-          <>
-          </>
-        );
-      case '3':
-        return (
-          <>
-            Control Panel Site
-          </>
-        );
-      case '2':
-          return (
-            <>
-              Puzzle Site
-            </>
-          );
+    switch (this.state.progress) {
+      case "4":
+        return <></>;
+      case "3":
+        return <>Control Panel Site</>;
+      case "2":
+        return <>Puzzle Site</>;
       default:
         return (
           <>
@@ -94,6 +74,6 @@ export default class App extends Component {
             <IntroScene />
           </>
         );
-      }
+    }
   }
 }
