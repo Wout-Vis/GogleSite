@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import LoginPopUP from "../loginForm/LoginPopUp";
 
 import Avatar from "../GFX/avatar.jpg";
+import { message } from "antd";
 
 export default function ChatbotComponent(props) {
   const theme = {
@@ -30,11 +31,13 @@ export default function ChatbotComponent(props) {
       message: "Hello, Welcome to our Website",
       trigger: "Ask Name",
     },
+
     {
       id: "Ask Name",
       message: "Please type your name?",
       trigger: "Waiting user input for name",
     },
+
     {
       id: "Waiting user input for name",
       user: true,
@@ -96,7 +99,7 @@ export default function ChatbotComponent(props) {
     {
       delay: 6000,
       id: "askCredit",
-      message: " Do you have the credentials?",
+      message: " Have you alredy found a potential password?",
       trigger: "creditAsk",
     },
     {
@@ -157,7 +160,8 @@ export default function ChatbotComponent(props) {
     {
       delay: 7500,
       id: "giveLogin",
-      message: " follow this link to the login",
+      message:
+        " luckilly I have some hakcing skills, okey ill quickly hack a link towards the employee login",
       trigger: "loginComponent",
     },
     {
