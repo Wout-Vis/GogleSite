@@ -6,7 +6,7 @@ const FooterPage = () => {
     <div class="container bg-light text-secondary mw-100">
       <div class="row w-100 pl-4 pt-3">
         <div class="col-sm-6 ">
-          <p>Netherlands</p>
+          <p>English</p>
         </div>
       </div>
       <div class="row pl-4">
