@@ -1,0 +1,23 @@
+#puzzleBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(67, 67, 67);
+  }
+  
+  #puzzleBox {
+    overflow: hidden;
+    width: 800px;
+    margin: 20px auto;
+  }
+  
+  canvas {
+    float: left;
+  }
+  
+  .puzzleSolution {
+    max-width: 200px;
+    float: right;
+  }

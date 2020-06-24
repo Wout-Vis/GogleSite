@@ -7,8 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import "./Styles/index.css";
-import "./Styles/carousel.css";
+import "./Styles/homepage.css";
 import "./Styles/story.css";
+import "./Styles/puzzle.css";
+import "./Styles/controlPanel.css";
 
 ReactDOM.render(
   <React.StrictMode>

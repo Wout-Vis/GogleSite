@@ -1,0 +1,60 @@
+#firstSlider {
+  height: 20%;
+  object-fit: cover;
+}
+
+#seccondSlider {
+  height: 20%;
+  object-fit: cover;
+}
+
+#thirdSlider {
+  height: 20%;
+  object-fit: cover;
+}
+
+#div_absolute {
+  border: 3px solid #8ac007;
+}
+
+#homeImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#quoteBox {
+  margin-top: 2vw;
+  margin-left: 4vw;
+  position: relative;
+  float: left;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.4fr 0.8fr 1.1fr;
+  grid-template-rows: 0.2fr 1fr 1.4fr 1.4fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . ." " . . founderImg ." ". founderText . ." ". . . ." ". . . .";
+}
+.founderQuote {
+  grid-area: founderQuote;
+  font-size: small;
+}
+
+.founderText {
+  grid-area: founderText;
+}
+
+.founderImg {
+  bottom: 10px;
+  grid-area: founderImg;
+  font-size: small;
+  text-align: center;
+}
+#founderImg {
+  width: 125%;
+}
+
+#meetTheBoard {
+  padding: 2vw;
+}
