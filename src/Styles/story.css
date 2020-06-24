@@ -37,3 +37,27 @@
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
+
+.section-title {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.content {
+  margin: 5em;
+  margin-top: 1em;
+}
+.content p {
+}
+.content h3 {
+  font-size: 1em;
+}
+
+.projectDiv {
+  margin: 10em;
+  margin-top: 1em;
+}
+.projectDiv p {
+}
+.projectDiv h2 {
+  font-size: 4em;
+}

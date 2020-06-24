@@ -9,6 +9,7 @@ h1 {
 p {
   font-family: "Open Sans", sans-serif;
 }
+
 @media screen and (max-width: 600px) {
   #quote {
     font-family: "Roboto", sans-serif;
@@ -31,6 +32,7 @@ p {
     font-size: 2vw;
   }
 }
+
 @keyframes fadeOut {
   0% {
     visibility: visible;
@@ -81,73 +83,6 @@ p {
   padding: 0;
 }
 
-/* Homepage Blog Box */
-#blogBox {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 10px;
-  width: 95%;
-  max-width: 1000px;
-  text-align: justify;
-  background-color: rgba(150, 150, 150, 0.3);
-  border-radius: 10px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#founderQuoteBox {
-  width: 30%;
-  margin-right: 4%;
-  margin-left: 2%;
-  float: right;
-  text-align: justify;
-}
-
-#founderQuote {
-  font-weight: bold;
-}
-
-#founderCitation {
-  font-style: italic;
-  text-align: right;
-}
-
-#homepageImgBox {
-  float: left;
-  width: 60%;
-  margin-left: 4%;
-}
-
-#homepageImg {
-  width: 100%;
-  max-width: 800px;
-}
-
-#puzzleBG {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(67, 67, 67);
-}
-
-#puzzleBox {
-  overflow: hidden;
-  width: 800px;
-  margin: 20px auto;
-}
-
-canvas {
-  float: left;
-}
-
-.puzzleSolution {
-  max-width: 200px;
-  float: right;
-}
-
 .invisible {
   visibility: hidden;
 }
@@ -159,4 +94,5 @@ canvas {
   left: 0;
   height: 100%;
   width: 100%;
+}
 }

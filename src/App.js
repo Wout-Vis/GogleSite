@@ -19,6 +19,7 @@ import Board from "./PageComponents/Board/Board";
 import Story from "./PageComponents/Story/Story";
 
 import DotPuzzle from './Puzzles/DotPuzzle';
+import RotatePuzzle from './Puzzles/RotatePuzzle'
 
 import MockUp from './ControlPanel/MockUp';
 
@@ -77,6 +78,7 @@ export default class App extends Component {
               <div id="puzzleBG">
                 <div id="puzzleBox">
                   <DotPuzzle />
+                  <RotatePuzzle />
                 </div>
               </div>
             </>
