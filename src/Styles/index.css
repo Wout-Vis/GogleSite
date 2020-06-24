@@ -126,11 +126,18 @@ p {
 }
 
 #puzzleBox {
-  width: 1000;
-  height: 900;
   overflow: hidden;
-  position: absolute;
-  left: calc(50% - 500px);
+  width: 800px;
+  margin: 20px auto;
+}
+
+canvas {
+  float: left;
+}
+
+.puzzleSolution {
+  max-width: 200px;
+  float: right;
 }
 
 .invisible {
