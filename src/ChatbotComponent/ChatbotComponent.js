@@ -4,7 +4,6 @@ import { ThemeProvider } from "styled-components";
 import LoginPopUP from "../loginForm/LoginPopUp";
 
 import Avatar from "../GFX/avatar.jpg";
-import { message } from "antd";
 
 export default function ChatbotComponent(props) {
   const theme = {
