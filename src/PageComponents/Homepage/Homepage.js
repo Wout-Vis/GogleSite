@@ -23,7 +23,8 @@ export default function Homepage() {
             advanced technologies provide a{" "}
             <span class="redText">revolutionary</span> new way to manage
             finance, government, science, environment and more. Let’s all work
-            together on a better <span class="yellowText">tomorrow</span>.”
+            <span class="yellowText"> together</span> on a better{" "}
+            <span class="greenText">tomorrow</span>.”
           </p>
         </div>
       </div>
