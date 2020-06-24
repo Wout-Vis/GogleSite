@@ -19,9 +19,11 @@ export default function Homepage() {
         <div className="col-md-4" id="quoteBox">
           <p id="quote">
             “From day one our goal at Gogle is to contribute to the betterment
-            of humanity. We believe that our advanced technologies provide a
-            revolutionary new way to manage finance, government, science,
-            environment and more. Let’s all work together on a better tomorrow.”
+            of <span class="blueText">humanity</span>. We believe that our
+            advanced technologies provide a{" "}
+            <span class="redText">revolutionary</span> new way to manage
+            finance, government, science, environment and more. Let’s all work
+            together on a better <span class="yellowText">tomorrow</span>.”
           </p>
         </div>
       </div>
