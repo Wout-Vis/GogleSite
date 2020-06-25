@@ -1,4 +1,6 @@
 For the tree we use some icons and symbols, only when we end up using the file system!!!!
+
+### npm install semantic-ui-react
 ### npm install --save react-toastify
 
 ### npm install --save react-indiana-drag-scroll
