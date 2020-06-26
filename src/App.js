@@ -119,7 +119,6 @@ export default class App extends Component {
                 <Route name="story" path="/story" component={Story} />
               </Switch>
             </Router>
-            <Profile />
             <FooterPage />
 
             <IntroScene />
