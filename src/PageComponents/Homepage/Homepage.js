@@ -22,7 +22,7 @@ export default function Homepage() {
         </div>
       </div>
       <div className="row" style={{ padding: 40 }}>
-        <div className="col-md-6">
+        <div className="col-md-7" id="containsMedia">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
               class="embed-responsive-item"
@@ -31,12 +31,14 @@ export default function Homepage() {
             ></iframe>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-5">
           <p id="textPic1">
-            “From day one our goal at Gogle is to contribute to the betterment
-            of humanity. We believe that our advanced technologies provide a{" "}
-            revolutionary new way to manage finance, government, science,
-            environment and more. Let’s all work together on a better tomorrow.”
+            Introducing our ground breaking new software stack.<br></br>
+            <br></br>
+            Combining the knowledge gained from products you love like Gogle
+            Green, Gogle Gov, Gogle Stocks and Gogle Science, we are ready to
+            simulate all of society. So that you can see which changes in your
+            company will have what effect in the future.
           </p>
         </div>
       </div>

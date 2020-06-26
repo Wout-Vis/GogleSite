@@ -33,7 +33,12 @@
   text-align: center;
 }
 #textPic1 {
+  color: grey;
 }
+/* #containsMedia {
+  padding-left: 1vw;
+  padding-right: 1vw;
+} */
 .grid-container {
   display: grid;
   grid-template-columns: 0.7fr 1.4fr 0.8fr 1.1fr;
