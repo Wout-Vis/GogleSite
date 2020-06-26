@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from "semantic-ui-react";
 
 export default class PrePannel extends Component {
   render() {
@@ -35,6 +36,7 @@ export default class PrePannel extends Component {
                 be investments, lay-offs, timed product launches, etc.
               </li>
             </ul>
+            <Button>To Project Odin</Button>
           </div>
         </div>
       </div>
