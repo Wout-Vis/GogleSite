@@ -12,6 +12,7 @@ import Chatbot from "./ChatbotComponent/Chatbot";
 import Progress from "./Progress";
 // Page Imports
 import Homepage from "./PageComponents/Homepage/Homepage";
+import Quantum from "./PageComponents/Quantum/Quantum";
 import Products from "./PageComponents/Branches/Branches";
 import Founder from "./PageComponents/Founder/Founder";
 import Board from "./PageComponents/Board/Board";
@@ -113,6 +114,7 @@ export default class App extends Component {
               <Chatbot />
               <Switch>
                 <Route name="home" exact path="/" component={Homepage} />
+                <Route name="quantum" path="/quantum" component={Quantum} />
                 <Route name="products" path="/products" component={Products} />
                 <Route name="founder" path="/founder" component={Founder} />
                 <Route name="board" path="/board" component={Board} />

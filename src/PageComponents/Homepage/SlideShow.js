@@ -30,7 +30,11 @@ export default function SlideShow() {
             alt="First slide"
             draggable="false"
           />
-          <Carousel.Caption></Carousel.Caption>
+          <Carousel.Caption>
+            <Button size="lg" as={Link} to="/quantum">
+              Learn more
+            </Button>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
