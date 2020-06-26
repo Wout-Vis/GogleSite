@@ -2,7 +2,7 @@ import React from "react";
 
 import { Carousel, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import slideOne from "../../GFX/slideOne.svg";
+
 export default function SlideShow() {
   return (
     <div>
@@ -12,7 +12,7 @@ export default function SlideShow() {
             style={{ height: 400 }}
             id="firstSlider"
             className="d-block w-100"
-            src={slideOne}
+            src="https://singularityhub.com/wp-content/uploads/2019/03/IBM-quantum-machine-learning-nature-art-square-Computing-1068x601.jpg"
             alt="First slide"
             draggable="false"
           />

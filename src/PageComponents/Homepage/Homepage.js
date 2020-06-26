@@ -3,62 +3,26 @@ import SlideShow from "./SlideShow";
 
 import { Link } from "react-router-dom";
 import { Image, Card, Button } from "react-bootstrap";
-import pictureOne from "../../GFX/combinedPicture.png";
-
 export default function Homepage() {
   return (
     <div>
       <SlideShow />
       <div className="row" style={{ padding: 40 }}>
-        <div className="col" id="quoteBox">
-          <p id="quote">
-            “Our goal at Gogle is to contribute to the{" "}
-            <span class="blueText">betterment of humanity</span>. Our advanced
-            technologies provide<span class="redText"> revolutionary</span> new
-            ways to manage and optimize. Let’s all work
-            <span class="yellowText"> together</span> on a better{" "}
-            <span class="greenText">tomorrow</span>.”
-          </p>
-        </div>
-      </div>
-      <div className="row" style={{ padding: 40 }}>
-        <div className="col-md-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              class="embed-responsive-item"
-              src="https://drive.google.com/file/d/10k7eTDl4_ZWgvrj-f86IYWiAjEW9g-_t/preview"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <p id="textPic1">
-            “From day one our goal at Gogle is to contribute to the betterment
-            of humanity. We believe that our advanced technologies provide a{" "}
-            revolutionary new way to manage finance, government, science,
-            environment and more. Let’s all work together on a better tomorrow.”
-          </p>
-        </div>
-      </div>
-      <div className="row" style={{ padding: 40 }}>
-        <div className="col-md-6">
-          <p id="textPic1">
-            “From day one our goal at Gogle is to contribute to the betterment
-            of <span class="blueText">humanity</span>. We believe that our
-            advanced technologies provide a{" "}
-            <span class="redText">revolutionary</span> new way to manage
-            finance, government, science, environment and more. Let’s all work
-            <span class="yellowText"> together</span> on a better{" "}
-            <span class="greenText">tomorrow</span>.”
-          </p>
-        </div>
         <div className="col-md-6">
           <Image
             alt="Bootstrap Image Preview"
             id="homeImg"
-            src={pictureOne}
+            src="https://i.pinimg.com/originals/e7/c3/fe/e7c3fe22594e57b4af69f5ab42644ac6.jpg"
             fluid
           />
+        </div>
+        <div className="col-md-4" id="quoteBox">
+          <p id="quote">
+            “From day one our goal at Gogle is to contribute to the betterment
+            of humanity. We believe that our advanced technologies provide a
+            revolutionary new way to manage finance, government, science,
+            environment and more. Let’s all work together on a better tomorrow.”
+          </p>
         </div>
       </div>
       <div id="meetTheBoard">
