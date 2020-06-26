@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Button } from "semantic-ui-react";
+import Progress from "../../Progress";
 
 export default class PrePannelComment extends Component {
   render() {
@@ -42,7 +43,9 @@ export default class PrePannelComment extends Component {
                       etc.
                     </li>
                   </ul>
-                  <Button>To Project Odin</Button>
+                  <Button onClick={Progress.updateProgress("4")}>
+                    To Project Odin
+                  </Button>
                 </div>
               </Grid.Column>
               <Grid.Column>
