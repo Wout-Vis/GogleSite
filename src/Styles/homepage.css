@@ -24,10 +24,15 @@
 }
 
 #quoteBox {
-  margin-top: 2vw;
-  margin-left: 4vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
   position: relative;
-  float: left;
+  float: center;
+  text-align: center;
+}
+#textPic1 {
 }
 .grid-container {
   display: grid;
