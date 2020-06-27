@@ -39,22 +39,21 @@
 }
 
 .section-title {
-  font-size: 3rem;
-
   font-family: "Roboto", sans-serif;
   text-align: center;
-  margin-bottom: 4rem;
 }
 .content {
   margin: 5em;
   margin-top: 1em;
 }
-
+.content p {
+}
 .content h3 {
   font-size: 1em;
 }
 
 .projectDiv {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   margin: 4em;
@@ -66,11 +65,16 @@
   margin-top: 4em;
 
 >>>>>>> parent of d10cc5e... Add files via upload
+=======
+>>>>>>> parent of b86ae9c... Add files via upload
   margin: 10em;
+  margin-top: 1em;
 }
-
+.projectDiv p {
+}
 .projectDiv h2 {
   font-size: 4em;
+<<<<<<< HEAD
 }
 
 .niceReads {
@@ -189,4 +193,6 @@
 
 #profileImg {
   margin-top: 8rem;
+=======
+>>>>>>> parent of b86ae9c... Add files via upload
 }
