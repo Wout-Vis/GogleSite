@@ -87,10 +87,16 @@ export default class DotPuzzle extends Component {
 
         let EndTimer = class
         {
+            constructor()
+            {
+                this.updated = false;
+            }
+            
             run()
             {
-                if ( p.millis() - this.timer > 3000 )
+                if ( p.millis() - this.timer > 3000 && this.updated === false )
                 {
+                    this.updated = true;
                     Progress.updateProgress( '3' );
                 }
             }
