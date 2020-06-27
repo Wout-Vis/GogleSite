@@ -15,7 +15,25 @@ p {
     font-family: "Roboto", sans-serif;
     font-size: 3.5vw;
   }
+  #textPic1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5vw;
+  }
 }
+
+@media screen and (min-width: 601px) {
+  #quote {
+    font-family: "Roboto", sans-serif;
+
+    font-size: 2vw;
+  }
+  #textPic1 {
+    font-family: "Roboto", sans-serif;
+
+    font-size: 1.5vw;
+  }
+}
+
 .blueText {
   color: rgb(66, 133, 244);
 }
@@ -27,13 +45,6 @@ p {
 }
 .greenText {
   color: rgb(52, 168, 83);
-}
-@media screen and (min-width: 601px) {
-  #quote {
-    font-family: "Roboto", sans-serif;
-
-    font-size: 2vw;
-  }
 }
 
 @keyframes fadeOut {
@@ -47,6 +58,20 @@ p {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -78,6 +103,11 @@ p {
   color: lightgrey;
 }
 
+div#endBox #introTextBox
+{
+  color: grey;
+}
+
 #logoBox {
   width: 500px;
   height: 281px;
@@ -88,4 +118,21 @@ p {
 
 .invisible {
   visibility: hidden;
+}
+
+#endBox
+{
+  max-width: 400px;
+  margin: 25% auto;
+
+  text-align: center;
+
+  visibility: visible;
+  opacity: 1;
+
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
 }

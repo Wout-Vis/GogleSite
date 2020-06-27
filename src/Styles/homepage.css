@@ -24,11 +24,21 @@
 }
 
 #quoteBox {
-  margin-top: 2vw;
-  margin-left: 4vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
   position: relative;
-  float: left;
+  float: center;
+  text-align: center;
 }
+#textPic1 {
+  color: grey;
+}
+/* #containsMedia {
+  padding-left: 1vw;
+  padding-right: 1vw;
+} */
 .grid-container {
   display: grid;
   grid-template-columns: 0.7fr 1.4fr 0.8fr 1.1fr;
@@ -57,4 +67,14 @@
 
 #meetTheBoard {
   padding: 2vw;
+}
+
+#quantumTitle {
+  margin-top: 5vw;
+  margin-bottom: 15vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+  float: center;
+  text-align: center;
 }

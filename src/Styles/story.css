@@ -55,13 +55,13 @@
 }
 
 .projectDiv {
-  margin: 4em;
+  margin-top: 4em;
+
   margin: 10em;
 }
 
 .projectDiv h2 {
   font-size: 4em;
-  margin-bottom: 2em;
 }
 
 .niceReads {
@@ -87,14 +87,12 @@
 
 .codeOfConduct {
   margin: 24rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .welcome h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
 }
 .companyNews h2 {
   font-size: 3rem;
@@ -112,18 +110,15 @@
 }
 
 .profileInfo {
-  margin-left: 30rem;
-  margin-right: 0rem;
-  margin-top: 4rem;
-  margin-bottom: 16em;
+  margin: 20rem;
+  margin-top: 0rem;
 }
 
 .profileInfo h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 3em;
   margin-bottom: 2rem;
 }
 
 #profileImg {
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
