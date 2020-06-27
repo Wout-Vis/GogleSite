@@ -5,6 +5,7 @@ import $ from 'jquery';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { render } from '@testing-library/react';
+import Progress from '../Progress'
 
     const cfgHealthcare = 0;
     const cfgResearch = 1;
@@ -199,6 +200,8 @@ export default class ControlPanel extends Component {
                 <div><ToastContainer /></div>
             );
             
+            Progress.updateProgress('5');
+
         });
     }
 
@@ -207,9 +210,6 @@ export default class ControlPanel extends Component {
         this.logTicker = setInterval(
             () => this.updateLogText( this.getRandomMessage() ), 2000
         );
-
-        //$("#applyButton").click( { simValue: this.state.simulationValues }, ending );
-            
     }
 
     componentWillUnmount()
