@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Image, Message, Embed } from "semantic-ui-react";
-import Schedule from "./scheduleAndStuff/schedule_withtext.svg";
-
+import Schedule from "./scheduleAndStuff/schedule.JPG";
 export default class Profile extends Component {
   render() {
     return (
@@ -25,13 +24,11 @@ export default class Profile extends Component {
                   </p>
                 </Grid.Column>
                 <Grid.Column>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe
-                      class="embed-responsive-item"
-                      src="https://drive.google.com/file/d/10k7eTDl4_ZWgvrj-f86IYWiAjEW9g-_t/preview"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
+                  <Embed
+                    id="O6Xo21L0ybE"
+                    placeholder="/images/image-16by9.png"
+                    source="youtube"
+                  />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
