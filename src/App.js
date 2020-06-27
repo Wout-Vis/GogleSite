@@ -10,102 +10,79 @@ import Footer from "./FooterComponent/Footer";
 import Chatbot from "./ChatbotComponent/Chatbot";
 
 import Progress from "./Progress";
+
 // Page Imports
 import Homepage from "./PageComponents/Homepage/Homepage";
-import Quantum from "./PageComponents/Quantum/Quantum";
 import Products from "./PageComponents/Branches/Branches";
 import Founder from "./PageComponents/Founder/Founder";
 import Board from "./PageComponents/Board/Board";
 import Story from "./PageComponents/Story/Story";
 
-// After login page imports
-import Integrety from "./PageComponents/CodeOfConduct/Integrety";
-import PrePannel from "./PageComponents/PrePannel/PrePannel";
-import NiceReads from "./PageComponents/NiceReads/NiceReads";
-import Profile from "./PageComponents/ProfilePage/Profile";
-import ProfileInformation from "./PageComponents/ProfileInformation/ProfileInformation";
+import DotPuzzle from './Puzzles/DotPuzzle';
+import RotatePuzzle from './Puzzles/RotatePuzzle'
 
-import DotPuzzle from "./Puzzles/DotPuzzle";
+import ControlPanel from './ControlPanel/ControlPanel';
 
-import MockUp from "./ControlPanel/MockUp";
-import FooterPage from "./FooterComponent/Footer";
-import Header2 from "./HeaderComponent/Header2";
 export default class App extends Component {
-  constructor() {
+  
+  constructor()
+  {
     super();
-    Progress.updateProgress("0");
+    Progress.updateProgress('3');
     this.state = {
-      progress: Progress.getProgress(),
+      progress: Progress.getProgress()
     };
     this.introTimer = 0;
   }
 
   componentDidMount() {
-    this.progressTicker = setInterval(() => this.tick(), 500);
+    this.progressTicker = setInterval(
+      () => this.tick(), 500
+    );
   }
 
   componentWillUnmount() {
-    clearInterval(this.progressTicker);
+    clearInterval( this.progressTicker );
   }
 
   tick() {
-    if (this.introTimer > 10) {
-      this.setState({ progress: Progress.getProgress() });
+    if ( this.introTimer > 10 )
+    {
+      this.setState(
+        { progress: Progress.getProgress() }
+      );
     } else {
       this.introTimer++;
     }
   }
 
   render() {
-    switch (this.state.progress) {
-      case "5":
-        return <>End Screen</>;
-      case "4":
-        return (
+
+    switch ( this.state.progress )
+    {
+      case '4':
+        return(
           <>
-            <MockUp />
+            End Screen
           </>
         );
-      case "3":
+      case '3':
         return (
           <>
-            <Router>
-              <Header2 />
-              <Switch>
-                <Route path="/Qin3M3n09nDhJHU2nuhdD" component={Profile} />
-                <Route
-                  path="/3a(3kJe28nkhdh703hkh3mpl0ye"
-                  component={Integrety}
-                />
-                <Route
-                  name="Books"
-                  path="/jnD3ejLpEnmZW9789Hnl83lDmHQE"
-                  component={NiceReads}
-                />
-                <Route
-                  name="prePanel"
-                  path="/JSn6yFsTxCRne2uOYCtt"
-                  component={PrePannel}
-                />
-                <Route
-                  name="story"
-                  path="/fdsHD8H3jDeqN082"
-                  component={ProfileInformation}
-                />
-              </Switch>
-            </Router>
+            <ControlPanel />
           </>
         );
-      case "2":
-        return (
-          <>
-            <div id="puzzleBG">
-              <div id="puzzleBox">
-                <DotPuzzle />
+      case '2':
+          return (
+            <>
+              <div id="puzzleBG">
+                <div id="puzzleBox">
+                  <DotPuzzle />
+                  <RotatePuzzle />
+                </div>
               </div>
-            </div>
-          </>
-        );
+            </>
+          );
       default:
         return (
           <>
@@ -114,18 +91,18 @@ export default class App extends Component {
               <Chatbot />
               <Switch>
                 <Route name="home" exact path="/" component={Homepage} />
-                <Route name="quantum" path="/quantum" component={Quantum} />
                 <Route name="products" path="/products" component={Products} />
                 <Route name="founder" path="/founder" component={Founder} />
                 <Route name="board" path="/board" component={Board} />
                 <Route name="story" path="/story" component={Story} />
               </Switch>
             </Router>
-            <FooterPage />
+
+            <Footer />
 
             <IntroScene />
           </>
         );
-    }
+      }
   }
 }

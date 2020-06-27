@@ -2,10 +2,7 @@ import React from "react";
 
 import { Carousel, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import slideQuantum from "../../GFX/quantum2.svg";
-import slideTeam from "../../GFX/theTeam.svg";
-import slideProducts from "../../GFX/products2.svg";
-import slideWelcome from "../../GFX/welcome.svg";
+
 export default function SlideShow() {
   return (
     <div>
@@ -15,25 +12,13 @@ export default function SlideShow() {
             style={{ height: 400 }}
             id="firstSlider"
             className="d-block w-100"
-            src={slideWelcome}
-            alt="First slide"
-            draggable="false"
-          />
-          <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            style={{ height: 400 }}
-            id="firstSlider"
-            className="d-block w-100"
-            src={slideQuantum}
+            src="https://singularityhub.com/wp-content/uploads/2019/03/IBM-quantum-machine-learning-nature-art-square-Computing-1068x601.jpg"
             alt="First slide"
             draggable="false"
           />
           <Carousel.Caption>
-            <Button size="lg" as={Link} to="/quantum">
-              Learn more
-            </Button>
+            <h3>Gogle</h3>
+            <p>Innovating since 2015</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -41,15 +26,16 @@ export default function SlideShow() {
             style={{ height: 400 }}
             id="seccondSlider"
             className="d-block w-100"
-            src={slideTeam}
+            src="https://cls.ucl.ac.uk/wp-content/uploads/nf_image/Children-future-opea2aeco8bf60clt46wy8vs.jpg"
             alt="Third slide"
             draggable="false"
           />
 
           <Carousel.Caption>
-            <Button size="lg" as={Link} to="/board">
-              Our Board
+            <Button size="lg" as={Link} to="/founder">
+              Our founder
             </Button>
+            <p>Take a look at our vision</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -57,15 +43,16 @@ export default function SlideShow() {
             id="thirdSlider"
             style={{ height: 400 }}
             className="d-block w-100"
-            src={slideProducts}
+            src="https://image.freepik.com/free-photo/stock-market-forex-trading-graph-graphic-concept_73426-66.jpg"
             alt="Third slide"
             draggable="false"
           />
 
           <Carousel.Caption>
             <Button size="lg" as={Link} to="/products">
-              Branches
+              Gogle Stocks
             </Button>
+            <p>now introducing Gogle stocks</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

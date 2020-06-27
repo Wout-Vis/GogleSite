@@ -39,86 +39,25 @@
 }
 
 .section-title {
-  font-size: 3rem;
-
   font-family: "Roboto", sans-serif;
   text-align: center;
-  margin-bottom: 4rem;
 }
 .content {
   margin: 5em;
   margin-top: 1em;
 }
-
+.content p {
+}
 .content h3 {
   font-size: 1em;
 }
 
 .projectDiv {
-  margin-top: 4em;
-
   margin: 10em;
+  margin-top: 1em;
 }
-
+.projectDiv p {
+}
 .projectDiv h2 {
   font-size: 4em;
-}
-
-.niceReads {
-  margin: 15em;
-  margin-top: 0em;
-}
-
-.niceReads h3 {
-  font-family: "Roboto", sans-serif;
-
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-.niceReads h2 {
-  font-family: "Roboto", sans-serif;
-
-  font-size: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.codeOfConduct {
-  margin: 24rem;
-  margin-top: 2rem;
-}
-
-.welcome h2 {
-  font-size: 2rem;
-  text-align: center;
-}
-.companyNews h2 {
-  font-size: 3rem;
-  text-align: center;
-}
-.companyNews {
-  margin: 15rem;
-  font-size: 2rem;
-  text-align: center;
-}
-.afterlogin {
-  margin-top: 0em;
-  min-height: 100%;
-  background-color: darkgray;
-}
-
-.profileInfo {
-  margin: 20rem;
-  margin-top: 0rem;
-}
-
-.profileInfo h2 {
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 2rem;
-}
-
-#profileImg {
-  margin-top: 8rem;
 }
